@@ -1,0 +1,7 @@
+{
+  "name": "LaLocale",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
