@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8" />
-  <title>Ionic App</title>
+  <title>La Locale</title>
 
   <base href="/" />
 
   <meta name="color-scheme" content="light dark" />
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta name="msapplication-tap-highlight" content="yes" />
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
@@ -21,6 +21,91 @@
 
 <body>
   <app-root></app-root>
+
+  <!-- TOP TOOLBAR -->
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>La Locale</ion-title>
+  </ion-toolbar>
+
+  <!-- ACCOUNT CARD -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mon Compte Local</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      euros locaux
+    </ion-card-content>
+  </ion-card>
+
+  <!-- PAYMENT AND ASK BUTTONS -->
+  <ion-button color="primary" style="padding-left: 20%;">Payer</ion-button>
+  <ion-button color="secondary" style="padding-right: 20%;">Demander</ion-button>
+
+  <!-- PAYMENT DETAILS -->
+  <ion-card>
+    <ion-item>
+      <ion-label>Jeudi 4 Janvier</ion-label>
+      <ion-button fill="outline" slot="end">Détails</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-card-subtitle>Jean Dupont</ion-card-subtitle>
+      Pour la bière au Comptoir
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Mercredi 3 Janvier</ion-label>
+      <ion-button fill="outline" slot="end">Détails</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-card-subtitle>Marie Jeanne</ion-card-subtitle>
+      Pour les poireaux
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Lundi 1 Janvier</ion-label>
+      <ion-button fill="outline" slot="end">Détails</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-card-subtitle>Pierre Paul</ion-card-subtitle>
+      Pour les croissants
+    </ion-card-content>
+  </ion-card>
+
+  <!-- NAVIGATION -->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" class="is-bottom">
+      <ion-tab-button tab="account">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>COMPTE</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="reduction"></ion-icon>
+        <ion-label>REDUC'</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
 </body>
+
+
 
 </html>
